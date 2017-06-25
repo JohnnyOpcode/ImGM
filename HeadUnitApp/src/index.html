@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ImGM</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- Base css, but you'll likely want to keep them -->
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+
+  <!-- Your custom files -->
+  <link rel="stylesheet" href="css/app.css" type="text/css">
+  <script src="js/tagcanvas.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      try {
+        TagCanvas.Start('myCanvas', 'tags', 
+          { textColour: '#ff0000',
+            outlineColour: '#ff00ff',
+            reverse: true,
+            depth: 0.8,
+            maxSpeed: 0.05
+          }); 
+      } catch (e) {
+        // something went wrong, hide the canvas container
+        document.getElementById('myCanvasContainer').style.display = 'none';
+      }
+    };
+  </script>
+
+  <script src="GMLIB/system.js"></script>
+  <script src="GMLIB/info.js"></script>
+  <!-- Uncomment libraries as you need them: -->
+  <!-- <script src="GMLIB/comm.js"></script> -->
+  <!-- <script src="GMLIB/io.js"></script> -->
+  <!-- <script src="GMLIB/media.js"></script> -->
+  <!-- <script src="GMLIB/monitor.js"></script> -->
+  <!-- <script src="GMLIB/nav.js"></script> -->
+  <!-- <script src="GMLIB/phone.js"></script> -->
+  <!-- <script src="GMLIB/ui.js"></script> -->
+  <!-- <script src="GMLIB/util.js"></script> -->
+  <!-- <script src="GMLIB/voice.js"></script> -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="main">
+      <h1>Impairment Monitoring - GM AI Hackathon</h1>
+      <div id="myCanvasContainer">
+        <canvas width="500" height="500" id="myCanvas">
+          <p>Anything in here will be replaced on browsers that support the canvas element</p>
+        </canvas>
+      </div>
+      <div id="tags">
+        <ul>
+          <li><a href="http://www.google.com" target="_blank">Mindfulness</a></li>
+          <li><a href="/fish">Happy</a></li>
+          <li><a href="/chips">Distracted</a></li>
+          <li><a href="/salt">Testing</a></li>
+          <li><a href="/vinegar">Teenager</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your app code: -->
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

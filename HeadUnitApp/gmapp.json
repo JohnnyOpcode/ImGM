@@ -1,0 +1,14 @@
+{
+  "name":"ImGM",
+  "id":"94446842",
+  "template": "Blank",
+  "version": "0.0.0",
+  "src": "src",
+  "dist": "dist",
+  "main": "index.html",
+  "icon": "Icon.png",
+  "developer": "johnnyopcode@gmail.com",
+  "category": "Monitoring",
+  "type": "RemoteHigh",
+  "description": "Generated on 6/24/2017, 6:48:14 PM by ngi-sdk version "
+}
