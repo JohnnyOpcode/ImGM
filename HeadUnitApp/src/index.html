@@ -5,31 +5,34 @@
   <title>ImGM</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <!-- Base css, but you'll likely want to keep them -->
   <link rel="stylesheet" href="css/reset.css" type="text/css">
-
-  <!-- Your custom files -->
   <link rel="stylesheet" href="css/app.css" type="text/css">
+
   <script src="js/tagcanvas.js"></script>
   <script type="text/javascript">
+    var TagCanvas;
     window.onload = function () {
       try {
-        TagCanvas.Start('myCanvas', 'tags', 
-          { textColour: '#ff0000',
-            outlineColour: '#ff00ff',
-            reverse: true,
+        TagCanvas.Start("myCanvas", "tags", 
+          { textColour: "#ffffff",
+            outlineColour: "#ff00ff",
+            noMouse: true,
+            initial: [0,.1],
             depth: 0.8,
+            shape: "hring",
+            lock: "x", 
             maxSpeed: 0.05
           }); 
       } catch (e) {
         // something went wrong, hide the canvas container
-        document.getElementById('myCanvasContainer').style.display = 'none';
+        document.getElementById("myCanvasContainer").style.display = "none";
       }
     };
   </script>
 
   <script src="GMLIB/system.js"></script>
   <script src="GMLIB/info.js"></script>
+  <script src="GMLIB/voice.js"></script>
   <!-- Uncomment libraries as you need them: -->
   <!-- <script src="GMLIB/comm.js"></script> -->
   <!-- <script src="GMLIB/io.js"></script> -->
@@ -39,25 +42,23 @@
   <!-- <script src="GMLIB/phone.js"></script> -->
   <!-- <script src="GMLIB/ui.js"></script> -->
   <!-- <script src="GMLIB/util.js"></script> -->
-  <!-- <script src="GMLIB/voice.js"></script> -->
-
+  
 </head>
 
 <body>
   <div id="wrapper">
     <div id="main">
-      <h1>Impairment Monitoring - GM AI Hackathon</h1>
       <div id="myCanvasContainer">
         <canvas width="500" height="500" id="myCanvas">
-          <p>Anything in here will be replaced on browsers that support the canvas element</p>
+          <p>Browsers that do not support the canvas element</p>
         </canvas>
       </div>
       <div id="tags">
         <ul>
-          <li><a>Awareness:</a></li>
-          <li><a>Engagement:</a></li>
-          <li><a>UpsetEvt:</a></li>
-          <li><a>Event Rate:</a></li>
+          <li><a id="Awareness">Awareness:</a></li>
+          <li><a id="Engagement">Engagement:</a></li>
+          <li><a id="UpsetEvt">UpsetEvt:</a></li>
+          <li><a id="EventRate">Event Rate:</a></li>
         </ul>
       </div>
     </div>
