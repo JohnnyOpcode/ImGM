@@ -8,4 +8,4 @@ The concept is simple. The Smart Camera is aimed inward, towards the driver. It 
 
 The role of the GM Infotainment System is to act as a user interface between the AI (in the Smart Camera) and the driver primarily thru voice announcements. The audio interface is expected to be the UI vector of the future and the NGI SDK enables our AI to interface seamlessly with the driver in just such a fashion. The current UX of our project is to display outputs from the TWN initially for the testing phase. We expect the actual implementation to be strictly a background process.
 
-![NGI Simulator Image](/ScreenCapture.jpg)
+![NGI Simulator Image](https://github.com/JohnnyOpcode/ImGM/blob/master/ScreenCapture.JPG)
